@@ -10,8 +10,9 @@ module tibia(tibia_alpha) {
     // main poly
     _tibia_h0 = servo_size[1] + tibia_holder_thickness * 2;
     _tibia_h1 = 17;
-    _tibia_w1 = 120;
+    _tibia_w1 = 110;
     _tibia_w2 = 10;
+    
     a0 = [[0, 0], [-10, _tibia_h0/2], [0, _tibia_h0],
             [servo_size[0] + servo_holder_size[0] * 2, _tibia_h0],
             [_tibia_w1, _tibia_h0-(_tibia_h0-_tibia_h1)/2],
@@ -81,10 +82,8 @@ module tibia(tibia_alpha) {
         rotate([-90, 0, 0]) bolt1(_bolt_size1, tibia_alpha);
         
         
-        
-        
     // end of tibia
-    _end_points = [[0, 0], [0, _tibia_h1], [10, _tibia_h1], [90, -40], [90, -45], [10, 0]];
+    _end_points = [[0, 0], [0, _tibia_h1], [10, _tibia_h1], [90, -45], [90, -50], [10, 0]];
     _end_pos_x = _tibia_w1 - servo_size[1]/2 - servo_holder_size[0] - _tibia_w2;
     color("blue", tibia_alpha) {
         translate([_end_pos_x, -(_holder_pos_y - material_thickness*2), -_tibia_h1/2])
@@ -92,6 +91,17 @@ module tibia(tibia_alpha) {
         translate([_end_pos_x, (_holder_pos_y - material_thickness), -_tibia_h1/2])
             rotate([90, 0, 0]) linear_extrude(material_thickness) polygon(_end_points);
     }
+    
+    
+    echo();
+    echo();
+    
+    pos_of_end = [_end_pos_x + 90.13, 50];
+    tibia_w = sqrt( pow(pos_of_end[0], 2) + pow(pos_of_end[1], 2) );
+    echo(tibia_w);
+    
+    echo();
+    echo();
     
     
     // bolts2
@@ -111,4 +121,4 @@ module tibia(tibia_alpha) {
         
 }
 
- // tibia();
+ //tibia();

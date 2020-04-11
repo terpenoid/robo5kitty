@@ -32,12 +32,12 @@ body_holder_thickness = 5;
 
 coxa = 50;
 femur = 100;
-tibia = 120;
+tibia = 180;
 
 /////////
 
 coxa_angle = 0;
-femur_angle = -120;
-tibia_angle = 160;
+femur_angle = -45;
+tibia_angle = 90;
 
 
