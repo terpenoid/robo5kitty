@@ -13,13 +13,17 @@ servo_pin_radius = 3;
 
 ////////
 
-servo_air_space = 1; // between servo and dynamic holder
+servo_air_space = 1.5; // between servo and dynamic holder
 material_thickness = 3;
 air_space = 0.5; // between servo and static holder
 
 ////////
 
 tibia_holder_thickness = 5;
+
+////////
+
+femur_holder_thickness = 5;
 
 ////////
 
@@ -32,7 +36,7 @@ body_holder_thickness = 5;
 ////////
 
 coxa = 50;
-femur = 110;
+femur = 90;
 tibia = 180;
 
 /////////
@@ -40,5 +44,3 @@ tibia = 180;
 coxa_angle = 0;
 femur_angle = -45;
 tibia_angle = 90;
-
-
